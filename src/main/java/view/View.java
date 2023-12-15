@@ -1,41 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package view;
 
 /**
- * In this class, user send info about Knight location.
  * @author Kamil Cioch
  * @version 0.1
  */
 
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class View {
-/*    public static String readPosition(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Wprowadz pozycje skoczka \n");
-        String firstPosition = scanner.nextLine();
-        System.out.println("Wprowadz miejsce docelowe skoczka \n");
-        String secondPosition = scanner.nextLine();
-        return
-    }
-*/
-    
-    public String askUserForPosition(){
-        return "";
-    }   
+    private Scanner scanner;
 
-    public void showPositionsToUser(){
-        //allowedPositions
+    public View() {
+        this.scanner = new Scanner(System.in);
     }
-    
-    public void printMessage(String message){
-        
+
+    public void printPossiblePositions(String possiblePositions) {
+        System.out.println("Possible positions are: " + possiblePositions);
     }
-    
-    public String getAnswerFromUser(String question){
-        return "";
+
+    public void printMessage(String message) {
+        System.out.println(message);
     }
-}
+
+    public String askUserForPosition() {
+        System.out.println("Wprowadź pozycję skoczka:");
+        return scanner.nextLine();
+    }
+
+    public String getAnswerFromUser(String question) {
+        System.out.println(question);
+        return scanner.nextLine();
+    }
+} 

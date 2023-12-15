@@ -1,3 +1,6 @@
 controller\JumpingKnight.class
+model\package-info.class
 view\View.class
 model\Knight.class
+view\package-info.class
+controller\package-info.class

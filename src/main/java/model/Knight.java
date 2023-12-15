@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 /**
@@ -12,23 +8,23 @@ package model;
 
 public class Knight {
     private String possiblePositionsList;
-    /**
-     * creating list of positions that are possible for moves
-     * @param position 
-     */
-    public Knight (String position){
-    //oblicz możliwe ruchy i zapisz do zmiennej;
-        possiblePositionsList = "a2 b3 j5";
-    //for now i have n o algorithm yet
+
+    public Knight(String position) {
+        this.possiblePositionsList = calculatePossibleMoves(position);
     }
-    
-    public String getPossiblePositionsList(){
-        return possiblePositionsList;
-    }
-    
-    public String validateStartingPosition(String startingPosition){
-        //checking if starting position is valid - if not, print error message
+
+    private String calculatePossibleMoves(String position) {
+        //calculating possible moves and output
         return "";
     }
-    
+
+    public String getPossiblePositionsList() {
+        return possiblePositionsList;
+    }
+
+    public boolean validateStartingPosition(String startingPosition) {
+        // Logika walidacji pozycji startowej
+        // Możesz sprawdzić, czy pozycja jest poprawna zgodnie z zasadami szachów
+        return true; // Zwróć true, jeśli pozycja jest poprawna, w przeciwnym razie false
+    }
 }
