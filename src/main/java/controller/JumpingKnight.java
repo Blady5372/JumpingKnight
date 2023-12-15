@@ -11,6 +11,7 @@ import view.View;
  * version: 0.1
  * @author Kamil Cioch
  */
+// ta klasa niżej była oryginalnie w projekcie, wszystko opisane to wiadomo co jest 5
 public class JumpingKnight {
     public static void main(String[] args){
         View view = new View();
@@ -30,7 +31,8 @@ public class JumpingKnight {
     }
 }
 
-//+
+//to co jest poniżej napisałem nowe. Generalnie wprowadzamy z klawiatury 
+//najpierw litere, a program sprawdza czy jest mała/duża, ew wywala błąd
 
 public class Position {
     public static void gimmeFirstPosition() {
@@ -47,6 +49,9 @@ public class Position {
             throw WrongPositionProvidedException;
         }
         scanner.close();
+
+//to samo jest tutaj  - tylko dla drugiej pozycji - w tym przypadku tylko
+//musi sprawdzić litere i ewentualnie zwraca błąd
         
     public static void gimmeSecondPosition() {
         Scanner scanner = new Scanner(System.in);
@@ -57,9 +62,14 @@ public class Position {
         }
         else {
             throw WrongPositionProvidedException;
+            //Paweł stwierdził, że tu takie cuś powinno (tzn linia powyżej),
+            //ale nwm jak to zaimplementować
+            //Wcześniej tutaj i w linii 49 był tylko 'println' 
         }
         scanner.close();
 }
+    
+//jakiś kod tworzący z moich 2 liczb parę obiektów
     
 Pair<int,int> parsePositionToNumbers(String position) throws jakiswyjatek {
   if (position.length != 2) throw new JakisWyjatek("bledna pozycja");
