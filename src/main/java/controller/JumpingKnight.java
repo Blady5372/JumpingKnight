@@ -66,3 +66,6 @@ Pair<int,int> parsePositionToNumbers(String position) throws jakiswyjatek {
   //parsujesz oba znaki sprytnie
   return new Pair<int,int(position.toLower().charAt(0) - 97, position.charAt(1) - 48);
 }
+
+
+//testowy tekst
